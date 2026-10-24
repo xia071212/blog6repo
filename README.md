@@ -2,7 +2,7 @@
 
 This project asks how strongly adult children's earnings are associated with their parents' earnings, and how the estimate changes when income is measured in one year or averaged across several years. It matches PSID parents and children with SQL, estimates intergenerational earnings elasticities (IGE), and compares them with rank–rank regressions.
 
-Read the [blog](https://xia071212.github.io/myrepo/blog/posts/post6/index.html), its [source](report/current_blog.qmd), or the [reproducibility document](reproducibility.qmd). The analysis uses income years 2016, 2018, 2020 and 2022, with the same 411 children in all five specifications.
+Read the [blog](https://xia071212.github.io/myrepo/blog/posts/post6/index.html), its [source](report/current_blog.qmd), or the [reproduction code](code/reproduce.py). The analysis uses income years 2016, 2018, 2020 and 2022, with the same 411 children in all five specifications.
 
 ## Data and sources
 
@@ -35,12 +35,11 @@ Annual and averaged models use unweighted OLS without additional controls. Earni
 
 ## Code and their roles
 
-The reproducibility document follows four stages: **Setup → read and match data → run regressions and save results → create and save figures**. Paths are defined together, output folders are created automatically, and the bootstrap seed is fixed. The Python entry point executes the document's code directly, so there is one version of the analysis to maintain.
+`code/reproduce.py` follows four stages: **Setup → read and match data → run regressions and save results → create and save figures**. Paths are defined together, output folders are created automatically, and the bootstrap seed is fixed. The complete workflow is written directly in this Python script, with numbered sections and comments.
 
 | Code | Purpose |
 |---|---|
-| [reproducibility.qmd](reproducibility.qmd) | Readable, executable Python sections covering the complete analysis and both figures |
-| [code/reproduce.py](code/reproduce.py) | Execute those sections in order from any working directory; accept an optional raw-data location |
+| [code/reproduce.py](code/reproduce.py) | Complete analysis and figure creation in four numbered sections; runs from any working directory and accepts an optional raw-data location |
 | [code/psid_io.py](code/psid_io.py) | Read documented fixed-width fields, record labels and hash the inputs |
 | [code/match_parents_children.sql](code/match_parents_children.sql) | Match people, assign earnings, filter observations, average income and calculate ranks |
 | [code/inference.py](code/inference.py) | Fit OLS models and calculate shared-parent clustered and bootstrap intervals |
@@ -64,7 +63,7 @@ The lifecycle figure groups children by their own starting age and parental earn
 ## Reproducing the analysis
 
 1. Prepare Python with the packages listed in `requirements.txt`, and place the six PSID releases in the folders described above.
-2. Open `reproducibility.qmd` to follow its four stages. Run `code/reproduce.py` to execute all the document's Python sections in order. The default input location is the sibling `Blog6data` folder; its `--data-dir` option accepts another location. This creates the local database, all result tables and both figures without requiring Quarto or changing the blog.
+2. Open `code/reproduce.py` to follow its four commented stages, and run the file with Python to reproduce the complete analysis. The default input location is the sibling `Blog6data` folder; its `--data-dir` option accepts another location. This creates the local database, all result tables and both figures without requiring Quarto or changing the blog.
 3. Inspect the saved tables under `results/tables/` and PNG images under `results/figures/`.
 
 The analysis checks unique individual and family-year keys, recorded parent identities, four observations per retained child, parental earnings sums, and agreement between SQL and independent calculations of averages and ranks. The bootstrap uses a fixed seed. Generated figures and article numbers come from these saved outputs.
