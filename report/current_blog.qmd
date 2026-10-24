@@ -1,5 +1,6 @@
 ---
 title: "Does the year change the parent–child income relationship?"
+description: "How strongly is children’s income associated with their parents’ income—and does the answer depend on the year we measure?"
 author: "Yuting Xia"
 date: 2026-10-22
 date-format: "MMMM D, YYYY"
@@ -17,7 +18,9 @@ format:
     link-external-newwindow: true
 ---
 
-**How strongly is children’s income associated with their parents’ income—and does the answer depend on the year we measure?** Higher-income parents may afford better education, helping children obtain better-paying jobs. To explore this relationship, we use **SQL** to match parents and children and **regression** to estimate the relationship between their earnings. We also compare single-year estimates with estimates based on income averaged across several years to assess how sensitive our results are to income measurement.
+Higher-income parents may afford better education, helping children obtain better-paying jobs. To explore this relationship, we use **SQL** to match parents and children and **regression** to estimate the relationship between their earnings. We also compare single-year estimates with estimates based on income averaged across several years to assess how sensitive our results are to income measurement.
+
+![](parents-children-income.png){fig-alt="Hand-drawn illustration of older parents and their adult child, with coins, a calendar and a clock representing earnings measured across years."}
 
 ## How do we match parents and children?
 
