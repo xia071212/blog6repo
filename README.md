@@ -19,7 +19,7 @@ Obtain the releases below from [PSID packaged data](https://simba.isr.umich.edu/
 
 Use the compatible 2023 Parent Identification and 1968–2023 Cross-Year Individual releases. The [variable dictionary](results/tables/variable_dictionary.csv) records the exact variables, labels and column positions. The [input audit](results/tables/audit.json) records source row counts and SHA-256 checksums.
 
-Raw PSID downloads remain outside the project. Generated person-level records stay in the ignored `data/processed/` folder; they are not part of the replication files shared through version control. Each reader obtains their own raw data.
+Under the [PSID Conditions of Use](https://simba.isr.umich.edu/U/CondUse.aspx), public-use data and user-created extracts must not be transferred to third parties. Raw PSID downloads therefore remain outside the project. Generated person-level records stay in the ignored `data/processed/` folder; they are not part of the replication files shared through version control. Each reader registers separately and obtains their own raw data. Data extracts intended for sharing must be deposited in the [PSID Public Data Extract Repository](https://psid.openicpsr.org/).
 
 ## Matching, income and sample
 
@@ -53,7 +53,6 @@ Result tables are saved in `results/tables/`; figures are saved in `results/figu
 | [rank_rank_same_sample.csv](results/tables/rank_rank_same_sample.csv) | Rank–rank slopes and intervals for the same five income measures |
 | [sample_flow.csv](results/tables/sample_flow.csv) | Selection table: distinct children and child–year observations at each step |
 | [eligible_by_wave.csv](results/tables/eligible_by_wave.csv) | Positive-income records by survey wave before requiring all four waves |
-| [inflation_diagnostic.csv](results/tables/inflation_diagnostic.csv) | Supporting check using earnings adjusted to 2022 dollars before averaging |
 | [audit.json](results/tables/audit.json), [variable_dictionary.csv](results/tables/variable_dictionary.csv) | Source checksums, counts, definitions and variable mappings |
 
 The lifecycle figure groups children by their own starting age and parental earnings by the father's starting age. These are fixed descriptive groups, not regression controls. Their trajectories illustrate age-dependent measurement; they do not measure the size of bias relative to lifetime earnings.
@@ -70,4 +69,3 @@ The analysis checks unique individual and family-year keys, recorded parent iden
 
 - [PSID](https://psidonline.isr.umich.edu/) and [2023 Parent Identification documentation](https://psidonline.isr.umich.edu/documents/psid/intro/pid23intro.pdf).
 - [Haider and Solon (2006), Life-Cycle Variation in the Association between Current and Lifetime Earnings](https://www.nber.org/papers/w11943).
-- [BLS annual CPI-U](https://www.bls.gov/regions/northeast/data/consumerpriceindex_us_table.htm).

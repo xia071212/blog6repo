@@ -155,19 +155,6 @@ def main():
     print(ige_results.to_string(index=False))
     print(rank_results.to_string(index=False))
 
-    # Save the separate inflation-adjustment diagnostic.
-    cpi = pd.read_csv(data_dir / "cpi.csv").set_index("income_year").cpi
-    real_income = balanced.copy()
-    real_income["factor"] = real_income.income_year.map(lambda year: 292.655 / cpi[year])
-    for variable in ["parent_income", "child_income"]:
-        real_income[variable] = real_income[variable] * real_income.factor
-    for wave, group in real_income.groupby("wave"):
-        nominal_slope = ige_results[ige_results.measure == str(wave - 1)].slope.iloc[0]
-        assert abs(fit_model(group, str(wave - 1), clusters)["slope"] - nominal_slope) < 1e-10
-    real_average = real_income.groupby(["child_id68", "child_pn"], as_index=False)[["parent_income", "child_income"]].mean()
-    inflation_result = fit_model(real_average, "Real four-year average (diagnostic only)", clusters)
-    pd.DataFrame([inflation_result]).to_csv(tables_dir / "inflation_diagnostic.csv", index=False)
-
     # Record how many people and child–year records survive each selection step.
     selection_steps = [
         ("pid", "Raw parent-ID file"),
