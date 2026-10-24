@@ -19,8 +19,6 @@ Obtain the releases below from [PSID packaged data](https://simba.isr.umich.edu/
 
 Use the compatible 2023 Parent Identification and 1968–2023 Cross-Year Individual releases. The [variable dictionary](results/tables/variable_dictionary.csv) records the exact variables, labels and column positions. The [input audit](results/tables/audit.json) records source row counts and SHA-256 checksums.
 
-The four annual CPI-U observations in [data/cpi.csv](data/cpi.csv) come from the [BLS annual CPI table](https://www.bls.gov/regions/northeast/data/consumerpriceindex_us_table.htm). They support a separate inflation-adjustment diagnostic; the article's main estimates use nominal earnings.
-
 Raw PSID downloads remain outside the project. Generated person-level records stay in the ignored `data/processed/` folder; they are not part of the replication files shared through version control. Each reader obtains their own raw data.
 
 ## Matching, income and sample
