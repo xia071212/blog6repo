@@ -1,0 +1,13 @@
+# Local microdata and raw downloads
+**/data/processed/
+/data/raw/
+/Blog6data/
+
+# Superseded local work, preserved outside the current replication bundle
+/archive/
+
+# Generated caches and editor files
+__pycache__/
+*.py[cod]
+.DS_Store
+.quarto/

@@ -1,0 +1,49 @@
+{
+  "links": 41622,
+  "matched": 27330,
+  "adult_observed": 6839,
+  "positive": 4232,
+  "balanced": 1644,
+  "averaged": 411,
+  "unique_positive_children": 1788,
+  "zero_in_either_parent_pair_years": 728,
+  "parents_different_household_pair_years": 76,
+  "source_files": [
+    {
+      "file": "PID23.txt",
+      "rows": 103725,
+      "sha256": "d853a5b34f46cf7546e0cde7765f6613b4b1001844552f9a8f43e8d4de887b64"
+    },
+    {
+      "file": "IND2023ER.txt",
+      "rows": 85536,
+      "sha256": "d68554ac828a690491572f37323eba1d8488e8b0001ed2aa89df4d4ade26c869"
+    },
+    {
+      "file": "FAM2017ER.txt",
+      "rows": 9607,
+      "sha256": "c4220fe0569f3dbb8e110029a9d4d896c41635c50c86b7cb9edd0e7a5de82b0f"
+    },
+    {
+      "file": "FAM2019ER.txt",
+      "rows": 9569,
+      "sha256": "80602015789c552cff3b75dfec6813204e918837f767f2e71744f51c07a9056d"
+    },
+    {
+      "file": "FAM2021ER.txt",
+      "rows": 9207,
+      "sha256": "c8a7a0589962bd3e6300e99595be16cb198ef48b3bb2b9b626743fe44cd185ae"
+    },
+    {
+      "file": "FAM2023ER.txt",
+      "rows": 9152,
+      "sha256": "384c63924b6667ecebd7b3ca797bfae94fcea4c0de1708c46ab25659a16432b2"
+    }
+  ],
+  "2017_median_ages": {
+    "child_age": 30.0,
+    "mother_age": 58.0,
+    "father_age": 59.0
+  },
+  "definition": "Nominal individual labor income excluding farm and unincorporated business income. Parent = recorded mother + recorded father. Child = own same-definition income."
+}

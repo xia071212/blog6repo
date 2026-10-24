@@ -1,0 +1,54 @@
+/* Keep the course template structure; change presentation only. */
+:root{--paper:#fcfaf8;--ink:#41464c;--muted:#737982;--blue:#e5edf3;--pink:#f4e4e6;--line:#e3dfe0;--link:#516d84}
+body{max-width:1000px;margin:auto;background:var(--paper);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"Helvetica Neue",Arial,sans-serif;font-size:16px;line-height:1.8}
+p{line-height:1.8}a{color:var(--link);text-underline-offset:4px}a:hover{color:#995f70}a:focus-visible,button:focus-visible,input:focus-visible{outline:3px solid #9b7184;outline-offset:4px}
+h1,h2,h3{font-family:inherit;font-weight:400;letter-spacing:.025em;color:var(--ink)}h1{margin-top:.5em;font-size:2.25rem;line-height:1.3}h1.title{font-size:2.2rem}h2{font-size:1.5rem;margin-top:2rem;border-bottom:1px solid var(--line);padding-bottom:.6rem}h3{font-size:1.15rem;margin-top:1.8rem}
+.navbar{background:var(--blue)!important;border-bottom:3px solid var(--pink);padding:1rem 1.1rem;font-size:1.05rem}.navbar-brand{color:var(--ink)!important;font-size:1.15rem;letter-spacing:.055em}.navbar-nav .nav-link{color:#535f6b!important;font-size:.94rem;padding:.45rem .85rem!important}.navbar-nav .nav-link.active{background:var(--pink);border-radius:2px}.navbar-toggler{border-color:#a4b2bd}.navbar-toggler-icon{filter:brightness(.4)}
+#quarto-content{padding-top:2.5rem}main{margin-bottom:3rem}.columns{gap:2.4rem;align-items:center;margin-top:1.5rem;margin-bottom:3rem}.columns>.column{min-width:0}.columns>.column:first-child{flex-shrink:1}.columns>.column:nth-child(2){flex-shrink:1}.columns>.column:first-child img{border:9px solid var(--blue);border-radius:2px}.columns>.column:nth-child(2)>p:first-child{margin-bottom:1.5rem}.columns h1{margin:.6rem 0 1rem}.columns h3{font-size:1rem;letter-spacing:.08em;margin-top:1.6rem}
+.quick-links{display:flex;gap:1.5rem;align-items:center}.quick-links a,.unavailable-link{display:inline-flex;width:42px;height:42px;align-items:center;justify-content:center;border-radius:2px}.quick-links a:hover{background:var(--pink)}.unavailable-link{color:#a4a8ad;cursor:default}
+.nav-footer{background:var(--pink);border-top:1px solid var(--line);color:#62636b;font-size:.8rem;padding:.9rem 1rem}.nav-footer-left img{max-width:100px}.nav-footer-center{align-self:center}
+.quarto-title .subtitle{color:var(--muted);font-size:1.05rem;margin-top:1rem}.quarto-title-meta{font-size:.85rem;margin-top:1.4rem}.quarto-title-meta-heading{color:var(--muted)}.quarto-category{color:var(--link)!important;border:1px solid #c7d7e1!important;background:#eef3f7;border-radius:2px!important;font-size:.68rem!important;padding:3px 8px!important}
+.quarto-listing-default .quarto-post{padding:1.7rem 0;border-color:var(--line)}.quarto-post .listing-title{font-size:1.35rem;font-weight:400;line-height:1.5}.quarto-post .listing-description{font-size:.95rem;color:var(--muted)}.quarto-post .thumbnail img{object-fit:contain!important;background:var(--blue)}
+table{font-size:.86rem;line-height:1.5}thead{background:var(--blue)}table th,table td{padding:.75rem!important}figure{margin:1.6rem 0}figcaption{font-size:.78rem;color:var(--muted)}.source-note{margin-top:2.5rem;padding-top:1rem;border-top:1px solid var(--line);font-size:.8rem;color:var(--muted);overflow-wrap:anywhere}
+.decision-widget{padding:1.4rem;background:#edf2f6;border:1px solid #d6e1e9;border-radius:2px;display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;margin:1.5rem 0}.widget-heading{grid-column:1/-1}.eyebrow{font-size:.66rem;letter-spacing:.13em;color:#697581;display:block}.widget-heading h3{font-size:1.25rem;margin:.5rem 0}.widget-controls label{display:flex;justify-content:space-between;gap:.6rem;font-size:.85rem}.widget-controls output{font-variant-numeric:tabular-nums}.widget-controls input{width:100%;accent-color:#8c7184;min-height:25px;margin:.6rem 0}.control-help{font-size:.73rem;color:#666d75;line-height:1.6}.widget-result{background:#fbf3f4;padding:1.1rem;border-radius:2px}.decision-text{font-size:1.25rem;line-height:1.4;margin:1rem 0}#decision-reason{font-size:.8rem}.result-totals{display:grid;grid-template-columns:1fr 1fr;gap:.8rem;border-top:1px solid #dfd1d6;padding-top:.8rem}.result-totals p{font-size:.7rem;line-height:1.6;margin:0}.result-totals strong{font-weight:500;font-size:1.3rem}
+@media(max-width:767px){body{font-size:16px}#quarto-content{padding-top:1.4rem}.columns{display:flex!important;flex-direction:column;gap:1.5rem;align-items:stretch}.columns>.column{width:100%!important}.columns>.column:first-child{max-width:245px;align-self:center}.columns>.column:nth-child(2){padding:0!important}h1.title{font-size:1.9rem}.decision-widget{grid-template-columns:1fr;padding:1rem}.navbar{padding:.75rem}.nav-footer{gap:1rem}.quarto-post .listing-title{font-size:1.2rem}}
+/* The original 35/65 columns remain; flex only adds breathing room. */
+.columns{display:flex;align-items:flex-start}
+#quarto-search .aa-SubmitIcon{fill:#697988}
+
+main .columns{display:flex;gap:2.4rem;align-items:flex-start}
+main .columns>.column{float:none;flex-shrink:1}
+@media(max-width:767px){main .columns{flex-direction:column;gap:1.5rem}main .columns>.column{width:100%!important}}
+
+/* Blog 1: title, categories, then subtitle. */
+.sunk-cost-post .quarto-title{display:flex;flex-direction:column}
+.sunk-cost-post .quarto-title>.title{order:1}
+.sunk-cost-post .quarto-title>.quarto-categories{order:2}
+.sunk-cost-post .quarto-title>.subtitle{order:3}
+
+/* Blog 2: keep wide data tables readable on small screens. */
+.fed-policy-post .table-scroll{overflow-x:auto;margin:1.2rem 0 1.8rem}
+.fed-policy-post .table-scroll table{min-width:620px;margin-bottom:0}
+.fed-policy-post figure img{width:100%;height:auto}
+.fed-policy-post .source-note code{font-size:.76rem}
+/* Place the brief news introduction directly below the categories. */
+.fed-policy-post .quarto-title{display:flex;flex-direction:column}
+.fed-policy-post .quarto-title>.title{order:1}
+.fed-policy-post .quarto-title>.quarto-categories{order:2}
+.fed-policy-post #title-block-header .description{font-style:italic}
+.blog3-post #title-block-header .description{font-style:italic}
+.blog3-post figure img{width:100%;height:auto}
+
+/* Blog 4 follows the existing course blog typography and article format. */
+.blog4-post #title-block-header .description{font-style:italic}
+.blog4-post figure img{width:100%;height:auto}
+
+/* Blog 6 tutorial: the existing paper, blue and pink palette. */
+body { padding: 0 1.2rem; }
+.blog6-post figure img { width: 100%; height: auto; }
+.blog6-post pre { font-size: .82rem; line-height: 1.55; }
+.blog6-post div.sourceCode { background: #edf2f6; border: 1px solid #d6e1e9; }
+.blog6-post strong { font-weight: 650; }
+.blog6-post table { width: 100%; }
+.blog6-post figure { margin: 1.6rem 0; }
+@media(max-width:767px) { body { padding: 0 .7rem; } }

@@ -1,0 +1,25 @@
+age_group,income_year,median,n,generation
+19–29,2016,31750.0,198,child_income
+19–29,2018,40650.0,198,child_income
+19–29,2020,44330.5,198,child_income
+19–29,2022,58250.0,198,child_income
+30–39,2016,46000.0,176,child_income
+30–39,2018,50000.0,176,child_income
+30–39,2020,51856.0,176,child_income
+30–39,2022,60000.0,176,child_income
+40+,2016,50000.0,37,child_income
+40+,2018,55000.0,37,child_income
+40+,2020,65000.0,37,child_income
+40+,2022,70000.0,37,child_income
+Under 55,2016,84000.0,75,parent_income
+Under 55,2018,97500.0,75,parent_income
+Under 55,2020,95000.0,75,parent_income
+Under 55,2022,102440.0,75,parent_income
+55–64,2016,96064.0,258,parent_income
+55–64,2018,83000.0,258,parent_income
+55–64,2020,71876.5,258,parent_income
+55–64,2022,64800.0,258,parent_income
+65+,2016,62250.0,78,parent_income
+65+,2018,61750.0,78,parent_income
+65+,2020,52000.0,78,parent_income
+65+,2022,34279.0,78,parent_income
