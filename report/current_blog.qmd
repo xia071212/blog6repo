@@ -117,7 +117,7 @@ IGE measures percentage earnings gaps; ranks measure relative positions, limitin
 
 ## Takeaway
 
-**Higher parental earnings are associated with higher child earnings.** Using averaged income, the IGE of 0.117 means that 1% higher parental earnings are associated with approximately 0.117% higher child earnings. Averaged income can better reflect long-run earnings than single-year income by spanning career stages and reducing dependence on earnings at one age. The rank coefficient of 0.238 means that a ten-percentile-point parental earnings advantage is associated with a 2.38-percentile-point advantage in child earnings.
+**Higher parental earnings are associated with higher child earnings.** Using averaged income, the IGE of 0.117 means that 1% higher parental earnings are associated with approximately 0.117% higher child earnings. **Averaged income can better reflect long-run earnings than single-year income by spanning career stages and reducing dependence on earnings at one age.** The rank coefficient of 0.238 means that a ten-percentile-point parental earnings advantage is associated with a 2.38-percentile-point advantage in child earnings.
 
 ::: {.source-note}
 **Sources and replication.** [PSID](https://psidonline.isr.umich.edu/) supplies the data; the [project README](../README.md) documents variable definitions, data access, and how to reproduce the analysis.
