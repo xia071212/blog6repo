@@ -2,7 +2,7 @@
 
 This project asks how strongly adult children's earnings are associated with their parents' earnings, and how the estimate changes when income is measured in one year or averaged across several years. It matches PSID parents and children with SQL, estimates intergenerational earnings elasticities (IGE), and compares them with rank–rank regressions.
 
-Read the [blog](https://xia071212.github.io/myrepo/blog/posts/post6/index.html), its [source](report/current_blog.qmd), the [reproducibility document](reproducibility.qmd), or the [technical review](report/revised_review.html). The analysis uses income years 2016, 2018, 2020 and 2022, with the same 411 children in all five specifications.
+Read the [blog](https://xia071212.github.io/myrepo/blog/posts/post6/index.html), its [source](report/current_blog.qmd), or the [reproducibility document](reproducibility.qmd). The analysis uses income years 2016, 2018, 2020 and 2022, with the same 411 children in all five specifications.
 
 ## Data and sources
 
@@ -44,11 +44,10 @@ The reproducibility document follows four stages: **Setup → read and match dat
 | [code/psid_io.py](code/psid_io.py) | Read documented fixed-width fields, record labels and hash the inputs |
 | [code/match_parents_children.sql](code/match_parents_children.sql) | Match people, assign earnings, filter observations, average income and calculate ranks |
 | [code/inference.py](code/inference.py) | Fit OLS models and calculate shared-parent clustered and bootstrap intervals |
-| [code/build_review.py](code/build_review.py) | Optional detailed methods and validation review |
 
 ## Results used in the article
 
-Result tables are saved in `results/tables/`; figures are saved in `results/figures/`. Reproducing the analysis does not edit or render the blog. The two unchanged images under `results/revised/` remain available because the existing blog source refers to those paths.
+Result tables are saved in `results/tables/`; figures are saved in `results/figures/`. Reproducing the analysis does not edit or render the blog. The blog source refers directly to these figures.
 
 | Output | Connection to the article |
 |---|---|
@@ -67,7 +66,6 @@ The lifecycle figure groups children by their own starting age and parental earn
 1. Prepare Python with the packages listed in `requirements.txt`, and place the six PSID releases in the folders described above.
 2. Open `reproducibility.qmd` to follow its four stages. Run `code/reproduce.py` to execute all the document's Python sections in order. The default input location is the sibling `Blog6data` folder; its `--data-dir` option accepts another location. This creates the local database, all result tables and both figures without requiring Quarto or changing the blog.
 3. Inspect the saved tables under `results/tables/` and PNG images under `results/figures/`.
-4. Optionally run `code/build_review.py` to update the technical review. This separate step uses Pandoc, either on PATH directly or bundled with Quarto on PATH. It is not needed to reproduce the analysis or figures.
 
 The analysis checks unique individual and family-year keys, recorded parent identities, four observations per retained child, parental earnings sums, and agreement between SQL and independent calculations of averages and ranks. The bootstrap uses a fixed seed. Generated figures and article numbers come from these saved outputs.
 

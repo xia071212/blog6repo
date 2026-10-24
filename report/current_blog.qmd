@@ -82,13 +82,13 @@ $$\log C_{it}=\alpha_t+\beta_t\log(M_{it}+F_{it})+\varepsilon_{it}.$$
 
 **The intergenerational elasticity (IGE), $\beta_t$, measures the percentage difference in child earnings associated with 1% higher parental earnings.** For the multi-year model, average earnings in levels before taking logs.
 
-![Same 411 children throughout; bars show 95% confidence intervals clustered by shared-parent networks.](../results/revised/ige_comparison.png){#fig-ige}
+![Same 411 children throughout; bars show 95% confidence intervals clustered by shared-parent networks.](../results/figures/ige_comparison.png){#fig-ige}
 
 **All estimates show a positive association between parental and child earnings. The estimates for 2020, 2022, and averaged income are statistically significant at the 5% level.** The IGE is 0.126 in 2020, 0.078 in 2022, and 0.117 using averaged income. The 2016 and 2018 estimates are positive, but their confidence intervals include zero. **Single-year estimates** can vary with temporary earnings shocks and career stages. **Averaging** can smooth temporary fluctuations, making income a better measure of longer-run earnings. Next, we explore how parents’ and children’s life-cycle earnings patterns can affect these estimates.
 
 ## How could life-cycle bias enter?
 
-![Fixed groups based on 2017 interview ages. Parents’ lines show combined earnings, grouped by the father’s age. Dollars are nominal.](../results/revised/life_cycle_paths.png){#fig-lifecycle}
+![Fixed groups based on 2017 interview ages. Parents’ lines show combined earnings, grouped by the father’s age. Dollars are nominal.](../results/figures/life_cycle_paths.png){#fig-lifecycle}
 
 **Median earnings rise in every child age group, while parental medians fall in both groups with fathers initially aged 55 or older.** The youngest children rise from $31,750 to $58,250; parents in the oldest group fall from $62,250 to $34,279. The under-55 parent group rises overall. These patterns fit career progression and retirement.
 
