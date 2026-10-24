@@ -29,6 +29,8 @@ From the **Parent Identification File**, we select **identifiers linking each ch
 
 A **wave** is one interview round. Matching within the same wave links all three people in the same survey year: for example, the 2017 interviews reporting 2016 earnings.
 
+In [Python](https://github.com/xia071212/blog6repo/blob/main/code/reproduce.py), `sqlite3` executes SQL; `pd.read_sql_query` returns results as DataFrames.
+
 ```sql
 -- 1. SELECT the identifiers and earnings to keep.
 SELECT l.child_id68, l.child_pn, ch.wave,
